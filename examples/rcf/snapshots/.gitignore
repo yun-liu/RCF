@@ -1,0 +1,4 @@
+# Store caffe .caffemodel and .solverstate in this folder.
+
+*.caffemodel
+*.solverstate

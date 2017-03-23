@@ -1,0 +1,142 @@
+name: "RCF"
+
+input: "data"
+input_shape {
+  dim: 1
+  dim: 3
+  dim: 224
+  dim: 224
+}
+
+layer { name: "conv1_1" type: "Convolution" bottom: "data" top: "conv1_1"
+  convolution_param { engine: CUDNN num_output: 64 pad: 1 kernel_size: 3 } }
+layer { name: "relu1_1" type: "ReLU" bottom: "conv1_1" top: "conv1_1" }
+layer { name: "conv1_2" type: "Convolution" bottom: "conv1_1" top: "conv1_2"
+  convolution_param { engine: CUDNN num_output: 64 pad: 1 kernel_size: 3 } }
+layer { name: "relu1_2" type: "ReLU" bottom: "conv1_2" top: "conv1_2" }
+layer { name: "pool1" type: "Pooling" bottom: "conv1_2" top: "pool1"
+  pooling_param { pool: MAX kernel_size: 2 stride: 2 } }
+
+layer { name: "conv2_1" type: "Convolution" bottom: "pool1" top: "conv2_1"
+  convolution_param { engine: CUDNN num_output: 128 pad: 1 kernel_size: 3 } }
+layer { name: "relu2_1" type: "ReLU" bottom: "conv2_1" top: "conv2_1" }
+layer { name: "conv2_2" type: "Convolution" bottom: "conv2_1" top: "conv2_2"
+  convolution_param { engine: CUDNN num_output: 128 pad: 1 kernel_size: 3 } }
+layer { name: "relu2_2" type: "ReLU" bottom: "conv2_2" top: "conv2_2" }
+layer { name: "pool2" type: "Pooling" bottom: "conv2_2" top: "pool2"
+  pooling_param { pool: MAX kernel_size: 2 stride: 2 } }
+
+layer { name: "conv3_1" type: "Convolution" bottom: "pool2" top: "conv3_1"
+  convolution_param { engine: CUDNN num_output: 256 pad: 1 kernel_size: 3 } }
+layer { name: "relu3_1" type: "ReLU" bottom: "conv3_1" top: "conv3_1" }
+layer { name: "conv3_2" type: "Convolution" bottom: "conv3_1" top: "conv3_2"
+  convolution_param { engine: CUDNN num_output: 256 pad: 1 kernel_size: 3 } }
+layer { name: "relu3_2" type: "ReLU" bottom: "conv3_2" top: "conv3_2" }
+layer { name: "conv3_3" type: "Convolution" bottom: "conv3_2" top: "conv3_3"
+  convolution_param { engine: CUDNN num_output: 256 pad: 1 kernel_size: 3 } }
+layer { name: "relu3_3" type: "ReLU" bottom: "conv3_3" top: "conv3_3" }
+layer { name: "pool3" type: "Pooling" bottom: "conv3_3" top: "pool3"
+  pooling_param { pool: MAX kernel_size: 2 stride: 2 } }
+
+layer { name: "conv4_1" type: "Convolution" bottom: "pool3" top: "conv4_1"
+  convolution_param { engine: CUDNN num_output: 512 pad: 1 kernel_size: 3 } }
+layer { name: "relu4_1" type: "ReLU" bottom: "conv4_1" top: "conv4_1" }
+layer { name: "conv4_2" type: "Convolution" bottom: "conv4_1" top: "conv4_2"
+  convolution_param { engine: CUDNN num_output: 512 pad: 1 kernel_size: 3 } }
+layer { name: "relu4_2" type: "ReLU" bottom: "conv4_2" top: "conv4_2" }
+layer { name: "conv4_3" type: "Convolution" bottom: "conv4_2" top: "conv4_3"
+  convolution_param { engine: CUDNN num_output: 512 pad: 1 kernel_size: 3 } }
+layer { name: "relu4_3" type: "ReLU" bottom: "conv4_3" top: "conv4_3" }
+layer { name: "pool4" type: "Pooling" bottom: "conv4_3" top: "pool4"
+  pooling_param { pool: MAX kernel_size: 2 stride: 1 } }
+
+layer { name: "conv5_1" type: "Convolution" bottom: "pool4" top: "conv5_1"
+  convolution_param { num_output: 512 pad: 2 kernel_size: 3 dilation: 2 } }
+layer { name: "relu5_1" type: "ReLU" bottom: "conv5_1" top: "conv5_1" }
+layer { name: "conv5_2" type: "Convolution" bottom: "conv5_1" top: "conv5_2"
+  convolution_param { num_output: 512 pad: 2 kernel_size: 3 dilation: 2 } }
+layer { name: "relu5_2" type: "ReLU" bottom: "conv5_2" top: "conv5_2" }
+layer { name: "conv5_3" type: "Convolution" bottom: "conv5_2" top: "conv5_3"
+  convolution_param { num_output: 512 pad: 2 kernel_size: 3 dilation: 2 } }
+layer { name: "relu5_3" type: "ReLU" bottom: "conv5_3" top: "conv5_3" }
+
+### conv1 ###
+layer { name: "conv1_1_down" type: "Convolution" bottom: "conv1_1" top: "conv1_1_down"
+  convolution_param { engine: CUDNN num_output: 21 kernel_size: 1 } }
+layer { name: "conv1_2_down" type: "Convolution" bottom: "conv1_2" top: "conv1_2_down"
+  convolution_param { engine: CUDNN num_output: 21 kernel_size: 1 } }
+layer { name: "score_fuse1" type: "Eltwise" bottom: "conv1_1_down" bottom: "conv1_2_down"
+  top: "score_fuse1" eltwise_param { operation: SUM } }
+layer { name: "score-dsn1" type: "Convolution" bottom: "score_fuse1" top: "upscore-dsn1"
+  convolution_param { engine: CUDNN num_output: 1 kernel_size: 1 } }
+layer { name: "sigmoid-dsn1" type: "Sigmoid" bottom: "upscore-dsn1" top: "sigmoid-dsn1"}
+
+### conv2 ###
+layer { name: "conv2_1_down" type: "Convolution" bottom: "conv2_1" top: "conv2_1_down"
+  convolution_param { engine: CUDNN num_output: 21 kernel_size: 1 } }
+layer { name: "conv2_2_down" type: "Convolution" bottom: "conv2_2" top: "conv2_2_down"
+  convolution_param { engine: CUDNN num_output: 21 kernel_size: 1 } }
+layer { name: "score_fuse2" type: "Eltwise" bottom: "conv2_1_down" bottom: "conv2_2_down"
+  top: "score_fuse2" eltwise_param { operation: SUM } }
+layer { name: "score-dsn2" type: "Convolution" bottom: "score_fuse2" top: "score-dsn2"
+  convolution_param { engine: CUDNN num_output: 1 kernel_size: 1 } }
+layer { name: "upsample_2" type: "Deconvolution" bottom: "score-dsn2" top: "score-dsn2-up"
+  convolution_param { kernel_size: 4 stride: 2 num_output: 1 } }
+layer { name: "crop2" type: "AutoCrop" bottom: "score-dsn2-up" bottom: "data" top: "upscore-dsn2" }
+layer { name: "sigmoid-dsn2" type: "Sigmoid" bottom: "upscore-dsn2" top: "sigmoid-dsn2"}
+
+### conv3 ###
+layer { name: "conv3_1_down" type: "Convolution" bottom: "conv3_1" top: "conv3_1_down"
+  convolution_param { engine: CUDNN num_output: 21 kernel_size: 1 } }
+layer { name: "conv3_2_down" type: "Convolution" bottom: "conv3_2" top: "conv3_2_down"
+  convolution_param { engine: CUDNN num_output: 21 kernel_size: 1 } }
+layer { name: "conv3_3_down" type: "Convolution" bottom: "conv3_3" top: "conv3_3_down"
+  convolution_param { engine: CUDNN num_output: 21 kernel_size: 1 } }
+layer { name: "score_fuse3" type: "Eltwise" bottom: "conv3_1_down" bottom: "conv3_2_down"
+  bottom: "conv3_3_down" top: "score_fuse3" eltwise_param { operation: SUM } }
+layer { name: "score-dsn3" type: "Convolution" bottom: "score_fuse3" top: "score-dsn3"
+  convolution_param { engine: CUDNN num_output: 1 kernel_size: 1 } }
+layer { name: "upsample_4" type: "Deconvolution" bottom: "score-dsn3" top: "score-dsn3-up"
+  convolution_param { kernel_size: 8 stride: 4 num_output: 1 } }
+layer { name: "crop3" type: "AutoCrop" bottom: "score-dsn3-up" bottom: "data" top: "upscore-dsn3" }
+layer { name: "sigmoid-dsn3" type: "Sigmoid" bottom: "upscore-dsn3" top: "sigmoid-dsn3"}
+
+### conv4 ###
+layer { name: "conv4_1_down" type: "Convolution" bottom: "conv4_1" top: "conv4_1_down"
+  convolution_param { engine: CUDNN num_output: 21 kernel_size: 1 } }
+layer { name: "conv4_2_down" type: "Convolution" bottom: "conv4_2" top: "conv4_2_down"
+  convolution_param { engine: CUDNN num_output: 21 kernel_size: 1 } }
+layer { name: "conv4_3_down" type: "Convolution" bottom: "conv4_3" top: "conv4_3_down"
+  convolution_param { engine: CUDNN num_output: 21 kernel_size: 1 } }
+layer { name: "score_fuse4" type: "Eltwise" bottom: "conv4_1_down" bottom: "conv4_2_down"
+  bottom: "conv4_3_down" top: "score_fuse4" eltwise_param { operation: SUM } }
+layer { name: "score-dsn4" type: "Convolution" bottom: "score_fuse4" top: "score-dsn4"
+  convolution_param { engine: CUDNN num_output: 1 kernel_size: 1 } }
+layer { name: "upsample_8" type: "Deconvolution" bottom: "score-dsn4" top: "score-dsn4-up"
+  convolution_param { kernel_size: 16 stride: 8 num_output: 1 } }
+layer { name: "crop4" type: "AutoCrop" bottom: "score-dsn4-up" bottom: "data" top: "upscore-dsn4" }
+layer { name: "sigmoid-dsn4" type: "Sigmoid" bottom: "upscore-dsn4" top: "sigmoid-dsn4"}
+
+### conv5 ###
+layer { name: "conv5_1_down" type: "Convolution" bottom: "conv5_1" top: "conv5_1_down"
+  convolution_param { engine: CUDNN num_output: 21 kernel_size: 1 } }
+layer { name: "conv5_2_down" type: "Convolution" bottom: "conv5_2" top: "conv5_2_down"
+  convolution_param { engine: CUDNN num_output: 21 kernel_size: 1 } }
+layer { name: "conv5_3_down" type: "Convolution" bottom: "conv5_3" top: "conv5_3_down"
+  convolution_param { engine: CUDNN num_output: 21 kernel_size: 1 } }
+layer { name: "score_fuse5" type: "Eltwise" bottom: "conv5_1_down" bottom: "conv5_2_down"
+  bottom: "conv5_3_down" top: "score_fuse5" eltwise_param { operation: SUM } }
+layer { name: "score-dsn5" type: "Convolution" bottom: "score_fuse5" top: "score-dsn5"
+  convolution_param { engine: CUDNN num_output: 1 kernel_size: 1 } }
+layer { name: "upsample_8_5" type: "Deconvolution" bottom: "score-dsn5" top: "score-dsn5-up"
+  convolution_param { kernel_size: 16 stride: 8 num_output: 1 } }
+layer { name: "crop5" type: "AutoCrop" bottom: "score-dsn5-up" bottom: "data" top: "upscore-dsn5" }
+layer { name: "sigmoid-dsn5" type: "Sigmoid" bottom: "upscore-dsn5" top: "sigmoid-dsn5"}
+
+### Concat and multiscale weight layer ###
+layer { name: "concat" bottom: "upscore-dsn1"  bottom: "upscore-dsn2" bottom: "upscore-dsn3"
+  bottom: "upscore-dsn4" bottom: "upscore-dsn5" top: "concat-upscore" type: "Concat"
+  concat_param { concat_dim: 1 } }
+layer { name: "new-score-weighting" type: "Convolution" bottom: "concat-upscore" top: "upscore-fuse"
+  convolution_param { engine: CUDNN num_output: 1 kernel_size: 1 } }
+layer { name: "sigmoid-fuse" type: "Sigmoid" bottom: "upscore-fuse" top: "sigmoid-fuse"}
