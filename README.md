@@ -15,10 +15,15 @@ If you are using the code/model/data provided here in a publication, please cons
       year={2017}
     }
 
-### Pretrained model
+### Pretrained models
 
 RCF model for BSDS500 dataset is available [here](https://pan.baidu.com/s/1pLazMGj).
+
 RCF model for NYUD dataset is available [here](https://pan.baidu.com/s/1pLc1LQb).
+
+### Evaluation results
+
+Evaluation results on BSDS500 and NYUD dataset are avilable [here](https://pan.baidu.com/s/1dE6sfIT).
 
 ### Testing RCF
 
@@ -35,16 +40,21 @@ RCF model for NYUD dataset is available [here](https://pan.baidu.com/s/1pLc1LQb)
 
 5. Go into the folder $ROOT_DIR/examples/rcf/. Then, you can run RCF-singlescale.ipynb to test single-scale RCF on BSDS500 dataset, or run RCF-multiscale.ipynb to test multiscale RCF on BSDS500 dataset, or run RCF-singlescale-NYUD.ipynb to test single-scale RCF on NYUD dataset.
 
-Note: Before evaluate the predicted edges, we use [standard NMS](https://github.com/pdollar/edges) to thin the edges.
+Note: Before evaluating the predicted edges, you should do the standard non-maximum suppression (NMS) and edge thinning. We used Piotr's Structured Forest matlab toolbox available [here](https://github.com/pdollar/edges).
 
 ### Training RCF
 
-If you have installed RCF as above, you can start training process by running following commands:
+1. Download the datasets you need.
+
+2. Download the pretrained vgg16 model from [here](https://pan.baidu.com/s/1i4FDzHN).
+
+3. Start training process by running following commands:
 
     ```Shell
     cd $ROOT_DIR/examples/rcf/
     ./train.sh
     ```
+    
 ### Acknowledgment
 
 This code is based on HED. Thanks to the contributors of HED.
