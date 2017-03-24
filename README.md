@@ -19,6 +19,8 @@ If you are using the code/model/data provided here in a publication, please cons
 
 Evaluation results for BSDS500 and NYUD datasets are avilable [here](https://pan.baidu.com/s/1dE6sfIT).
 
+(下载 = download)
+
 ### Pretrained models
 
 RCF model for BSDS500 dataset is available [here](https://pan.baidu.com/s/1pLazMGj).
