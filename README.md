@@ -14,16 +14,16 @@ If you are using the code/model/data provided here in a publication, please cons
       journal={Proceedings of the IEEE conference on computer vision and pattern recognition},
       year={2017}
     }
+    
+### Evaluation results
+
+Evaluation results for BSDS500 and NYUD datasets are avilable [here](https://pan.baidu.com/s/1dE6sfIT).
 
 ### Pretrained models
 
 RCF model for BSDS500 dataset is available [here](https://pan.baidu.com/s/1pLazMGj).
 
 RCF model for NYUD dataset is available [here](https://pan.baidu.com/s/1pLc1LQb).
-
-### Evaluation results
-
-Evaluation results on BSDS500 and NYUD dataset are avilable [here](https://pan.baidu.com/s/1dE6sfIT).
 
 ### Testing RCF
 
