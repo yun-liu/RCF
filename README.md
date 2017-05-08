@@ -17,15 +17,15 @@ If you are using the code/model/data provided here in a publication, please cons
     
 ### Evaluation results
 
-Evaluation results for BSDS500 and NYUD datasets are avilable [here](https://pan.baidu.com/s/1dE6sfIT).
+Evaluation results for BSDS500 and NYUD datasets are avilable [here](http://mftp.mmcheng.net/liuyun/rcf/eval.tar).
 
 (下载 = download)
 
 ### Pretrained models
 
-RCF model for BSDS500 dataset is available [here](https://pan.baidu.com/s/1pLazMGj).
+RCF model for BSDS500 dataset is available [here](http://mftp.mmcheng.net/liuyun/rcf/model/rcf_pretrained_bsds.caffemodel).
 
-RCF model for NYUD dataset is available [here](https://pan.baidu.com/s/1pLc1LQb).
+RCF model for NYUD dataset is available here([Depth](http://mftp.mmcheng.net/liuyun/rcf/model/rcf_pretrained_nyud_depth.caffemodel and [Image](http://mftp.mmcheng.net/liuyun/rcf/model/rcf_pretrained_nyud_image.caffemodel)).
 
 ### Testing RCF
 
@@ -36,7 +36,14 @@ RCF model for NYUD dataset is available [here](https://pan.baidu.com/s/1pLc1LQb)
     
 2. Download pretrained models, and put them into $ROOT_DIR/examples/rcf/ folder.
 
-3. Download the datasets you need from [here](https://pan.baidu.com/s/1eSOhosi), and extract these dataset to $ROOT_DIR/data/ folder.
+3. Download the datasets you need as below, and extract these datasets to $ROOT_DIR/data/ folder.
+
+```bash
+wget http://mftp.mmcheng.net/liuyun/rcf/data/bsds_pascal_train_pair.lst
+wget http://mftp.mmcheng.net/liuyun/rcf/data/HED-BSDS.tar.gz
+wget http://mftp.mmcheng.net/liuyun/rcf/data/PASCAL.tar.gz
+wget http://mftp.mmcheng.net/liuyun/rcf/data/NYUD.tar.gz
+```
 
 4. Build Caffe.
 
@@ -48,7 +55,7 @@ Note: Before evaluating the predicted edges, you should do the standard non-maxi
 
 1. Download the datasets you need.
 
-2. Download the pretrained vgg16 model from [here](https://pan.baidu.com/s/1i4FDzHN).
+2. Download the pretrained vgg16 model from [here](http://mftp.mmcheng.net/liuyun/rcf/model/5stage-vgg.caffemodel).
 
 3. Start training process by running following commands:
 
