@@ -1,4 +1,4 @@
-## Richer Convolutional Features for Edge Detection
+## [Richer Convolutional Features for Edge Detection](http://mmcheng.net/rcfedge/)
 
 ### Introduction
 
@@ -23,7 +23,7 @@ Evaluation results for BSDS500 and NYUD datasets are avilable [here](http://mftp
 
 RCF model for BSDS500 dataset is available [here](http://mftp.mmcheng.net/liuyun/rcf/model/rcf_pretrained_bsds.caffemodel).
 
-RCF model for NYUD dataset is available here([Depth](http://mftp.mmcheng.net/liuyun/rcf/model/rcf_pretrained_nyud_depth.caffemodel) and [Image](http://mftp.mmcheng.net/liuyun/rcf/model/rcf_pretrained_nyud_image.caffemodel)).
+RCF model for NYUD dataset is available here ([Depth](http://mftp.mmcheng.net/liuyun/rcf/model/rcf_pretrained_nyud_depth.caffemodel) and [Image](http://mftp.mmcheng.net/liuyun/rcf/model/rcf_pretrained_nyud_image.caffemodel)).
 
 ### Testing RCF
 
