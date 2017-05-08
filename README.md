@@ -19,13 +19,11 @@ If you are using the code/model/data provided here in a publication, please cons
 
 Evaluation results for BSDS500 and NYUD datasets are avilable [here](http://mftp.mmcheng.net/liuyun/rcf/eval.tar).
 
-(下载 = download)
-
 ### Pretrained models
 
 RCF model for BSDS500 dataset is available [here](http://mftp.mmcheng.net/liuyun/rcf/model/rcf_pretrained_bsds.caffemodel).
 
-RCF model for NYUD dataset is available here([Depth](http://mftp.mmcheng.net/liuyun/rcf/model/rcf_pretrained_nyud_depth.caffemodel and [Image](http://mftp.mmcheng.net/liuyun/rcf/model/rcf_pretrained_nyud_image.caffemodel)).
+RCF model for NYUD dataset is available here([Depth](http://mftp.mmcheng.net/liuyun/rcf/model/rcf_pretrained_nyud_depth.caffemodel) and [Image](http://mftp.mmcheng.net/liuyun/rcf/model/rcf_pretrained_nyud_image.caffemodel)).
 
 ### Testing RCF
 
@@ -38,12 +36,12 @@ RCF model for NYUD dataset is available here([Depth](http://mftp.mmcheng.net/liu
 
 3. Download the datasets you need as below, and extract these datasets to $ROOT_DIR/data/ folder.
 
-```bash
-wget http://mftp.mmcheng.net/liuyun/rcf/data/bsds_pascal_train_pair.lst
-wget http://mftp.mmcheng.net/liuyun/rcf/data/HED-BSDS.tar.gz
-wget http://mftp.mmcheng.net/liuyun/rcf/data/PASCAL.tar.gz
-wget http://mftp.mmcheng.net/liuyun/rcf/data/NYUD.tar.gz
-```
+    ```bash
+    wget http://mftp.mmcheng.net/liuyun/rcf/data/bsds_pascal_train_pair.lst
+    wget http://mftp.mmcheng.net/liuyun/rcf/data/HED-BSDS.tar.gz
+    wget http://mftp.mmcheng.net/liuyun/rcf/data/PASCAL.tar.gz
+    wget http://mftp.mmcheng.net/liuyun/rcf/data/NYUD.tar.gz
+    ```
 
 4. Build Caffe.
 
