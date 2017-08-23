@@ -117,10 +117,6 @@ void SigmoidCrossEntropyLossLayer<Dtype>::Backward_cpu(
   }
 }
 
-#ifdef CPU_ONLY
-STUB_GPU(SigmoidCrossEntropyLossLayer);
-#endif
-
 INSTANTIATE_CLASS(SigmoidCrossEntropyLossLayer);
 REGISTER_LAYER_CLASS(SigmoidCrossEntropyLoss);
 
