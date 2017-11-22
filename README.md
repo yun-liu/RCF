@@ -27,7 +27,7 @@ RCF model for NYUD dataset is available here ([Depth](http://mftp.mmcheng.net/li
 
 ### Testing RCF
 
-1. Clone the HFS repository
+1. Clone the RCF repository
     ```Shell
     git clone https://github.com/yun-liu/rcf.git
     ```
