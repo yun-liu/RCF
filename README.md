@@ -19,6 +19,10 @@ If you are using the code/model/data provided here in a publication, please cons
 
 Evaluation results for BSDS500 and NYUD datasets are avilable [here](http://mftp.mmcheng.net/liuyun/rcf/eval.tar).
 
+We have released code and data for plotting edge PR curves of many existing edge detectors [here](https://github.com/yun-liu/plot-edge-pr-curves).
+
+![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `#f03c15`
+
 ### Pretrained models
 
 RCF model for BSDS500 dataset is available [here](http://mftp.mmcheng.net/liuyun/rcf/model/rcf_pretrained_bsds.caffemodel).
