@@ -19,7 +19,7 @@ If you are using the code/model/data provided here in a publication, please cons
 
 Evaluation results for BSDS500 and NYUD datasets are avilable [here](http://mftp.mmcheng.net/liuyun/rcf/eval.tar).
 
-**We have released code and data for plotting edge PR curves of many existing edge detectors [here](https://github.com/yun-liu/plot-edge-pr-curves).**
+**We have released the code and data for plotting the edge PR curves of many existing edge detectors [here](https://github.com/yun-liu/plot-edge-pr-curves).**
 
 ### Pretrained models
 
