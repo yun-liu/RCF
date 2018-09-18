@@ -15,6 +15,9 @@ If you are using the code/model/data provided here in a publication, please cons
       year={2017}
     }
     
+
+**Note: For the pytorch implementation of RCF, please refer to the [github repo](https://github.com/meteorshowers/RCF-pytorch).**
+    
 ### Evaluation results
 
 Evaluation results for BSDS500 and NYUD datasets are avilable [here](http://mftp.mmcheng.net/liuyun/rcf/eval.tar).
