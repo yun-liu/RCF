@@ -15,9 +15,9 @@ If you are using the code/model/data provided here in a publication, please cons
       year={2017}
     }
     
-```diff
-- **Note: For the pytorch implementation of RCF, please refer to the [github repo](https://github.com/meteorshowers/RCF-pytorch).**
-```
+
+**Note: For the pytorch implementation of RCF, please refer to this [github repo](https://github.com/meteorshowers/RCF-pytorch).**
+
     
 ### Evaluation results
 
