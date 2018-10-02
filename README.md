@@ -16,7 +16,7 @@ If you are using the code/model/data provided here in a publication, please cons
     }
     
 
-###**Note: For the pytorch implementation of RCF, please refer to this [github repo](https://github.com/meteorshowers/RCF-pytorch). Thanks for Yuanyi's contribution!**
+###Note: For the pytorch implementation of RCF, please refer to this [github repo](https://github.com/meteorshowers/RCF-pytorch). Thanks for Yuanyi's contribution!
 
     
 ### Evaluation results
