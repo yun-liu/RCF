@@ -11,7 +11,8 @@ If you are using the code/model/data provided here in a publication, please cons
     @inproceedings{liu2017richer,
       title={Richer Convolutional Features for Edge Detection},
       author={Liu, Yun and Cheng, Ming-Ming and Hu, Xiaowei and Wang, Kai and Bai, Xiang},
-      journal={IEEE conference on computer vision and pattern recognition (CVPR)},
+      booktitle={IEEE conference on computer vision and pattern recognition (CVPR)},
+      pages={3000--3009},
       year={2017}
     }
     
