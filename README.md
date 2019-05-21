@@ -31,7 +31,7 @@ If you are using the code/model/data provided here in a publication, please cons
     
 ### Evaluation results
 
-Evaluation results for BSDS500 and NYUD datasets are avilable [here](http://mftp.mmcheng.net/liuyun/rcf/eval.tar).
+Evaluation results for BSDS500 and NYUD datasets are available [here](http://mftp.mmcheng.net/liuyun/rcf/eval.tar).
 
 **We have released the code and data for plotting the edge PR curves of many existing edge detectors [here](https://github.com/yun-liu/plot-edge-pr-curves).**
 
@@ -48,9 +48,9 @@ RCF model for NYUD dataset is available here ([Depth](http://mftp.mmcheng.net/li
     git clone https://github.com/yun-liu/rcf.git
     ```
     
-2. Download pretrained models, and put them into $ROOT_DIR/examples/rcf/ folder.
+2. Download pretrained models, and put them into `$ROOT_DIR/examples/rcf/` folder.
 
-3. Download the datasets you need as below, and extract these datasets to $ROOT_DIR/data/ folder.
+3. Download the datasets you need as below, and extract these datasets to `$ROOT_DIR/data/` folder.
 
     ```bash
     wget http://mftp.mmcheng.net/liuyun/rcf/data/bsds_pascal_train_pair.lst
@@ -61,7 +61,7 @@ RCF model for NYUD dataset is available here ([Depth](http://mftp.mmcheng.net/li
 
 4. Build Caffe.
 
-5. Go into the folder $ROOT_DIR/examples/rcf/. Then, you can run RCF-singlescale.ipynb to test single-scale RCF on BSDS500 dataset, or run RCF-multiscale.ipynb to test multiscale RCF on BSDS500 dataset, or run RCF-singlescale-NYUD.ipynb to test single-scale RCF on NYUD dataset.
+5. Go into the folder `$ROOT_DIR/examples/rcf/`. Then, you can run RCF-singlescale.ipynb to test single-scale RCF on BSDS500 dataset, or run RCF-multiscale.ipynb to test multiscale RCF on BSDS500 dataset, or run RCF-singlescale-NYUD.ipynb to test single-scale RCF on NYUD dataset.
 
 Note: Before evaluating the predicted edges, you should do the standard non-maximum suppression (NMS) and edge thinning. We used Piotr's Structured Forest matlab toolbox available [here](https://github.com/pdollar/edges).
 
