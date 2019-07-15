@@ -15,7 +15,7 @@ If you are using the code/model/data provided here in a publication, please cons
       pages={3000--3009},
       year={2017}
     }
-    
+
     @article{liu2019richer,
       title={Richer Convolutional Features for Edge Detection},
       author={Yun Liu and Ming-Ming Cheng and Xiaowei Hu and Jia-Wang Bian and Le Zhang and Xiang Bai and Jinhui Tang},
@@ -23,12 +23,12 @@ If you are using the code/model/data provided here in a publication, please cons
       year={2019},
       publisher={IEEE}
     }
-    
+
 
 
 ### Note: For the pytorch implementation of RCF, please refer to this [github repo](https://github.com/meteorshowers/RCF-pytorch). Thanks for Yuanyi's contribution!
 
-    
+
 ### Evaluation results
 
 Evaluation results for BSDS500 and NYUD datasets are available [here](http://mftp.mmcheng.net/liuyun/rcf/eval.tar).
@@ -47,7 +47,7 @@ RCF model for NYUD dataset is available here ([Depth](http://mftp.mmcheng.net/li
     ```Shell
     git clone https://github.com/yun-liu/rcf.git
     ```
-    
+
 2. Download pretrained models, and put them into `$ROOT_DIR/examples/rcf/` folder.
 
 3. Download the datasets you need as below, and extract these datasets to `$ROOT_DIR/data/` folder.
@@ -77,7 +77,11 @@ Note: Before evaluating the predicted edges, you should do the standard non-maxi
     cd $ROOT_DIR/examples/rcf/
     ./train.sh
     ```
-    
+
+### ResNet version of RCF
+
+The code for the ResNet version of RCF has been released. The pretrained ImageNet and BSDS500 models are available [here](https://drive.google.com/drive/folders/18X4vDHUTRjmyfDIC0Bbr2gDsQR2KEi7d). Some discussion can be found https://github.com/yun-liu/rcf/issues/89.
+
 ### Acknowledgment
 
 This code is based on HED. Thanks to the contributors of HED.
@@ -89,4 +93,3 @@ This code is based on HED. Thanks to the contributors of HED.
       pages={1395--1403},
       year={2015}
     }
-
