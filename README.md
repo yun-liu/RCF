@@ -24,10 +24,8 @@ If you are using the code/model/data provided here in a publication, please cons
       publisher={IEEE}
     }
 
-
-
-### Note: For the pytorch implementation of RCF, please refer to this [github repo](https://github.com/meteorshowers/RCF-pytorch). Thanks for Yuanyi's contribution!
-
+### PyTorch version of RCF
+For the pytorch implementation of RCF, please refer to this [github repository](https://github.com/meteorshowers/RCF-pytorch). Thanks for Yuanyi's contribution!
 
 ### Evaluation results
 
@@ -80,7 +78,11 @@ Note: Before evaluating the predicted edges, you should do the standard non-maxi
 
 ### ResNet version of RCF
 
-The code for the ResNet version of RCF has been released. The pretrained ImageNet and BSDS500 models are available [here](https://drive.google.com/drive/folders/18X4vDHUTRjmyfDIC0Bbr2gDsQR2KEi7d). Some discussion can be found https://github.com/yun-liu/rcf/issues/89.
+The code for the ResNet version of RCF has been released. The pretrained ImageNet and BSDS500 models are available [here](https://drive.google.com/drive/folders/18X4vDHUTRjmyfDIC0Bbr2gDsQR2KEi7d). Some discussion can be found under the [issue #89](https://github.com/yun-liu/rcf/issues/89).
+
+### What is the "AutoCrop" layer?
+
+The "AutoCrop" layer in RCF can caculate the crop offset automatically, and the recent version of Caffe doesn't support this. In fact, we can calculate the crop offset by ourselves, so we can replace the "AutoCrop" layer with the standard Crop layer in Caffe by setting the offsets to 1, 2, 4, and 0 for conv2, conv3, conv4, and conv5, respectively. More details can be found under the [issue #24](https://github.com/yun-liu/rcf/issues/24).
 
 ### Acknowledgment
 
