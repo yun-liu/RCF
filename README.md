@@ -10,7 +10,7 @@ If you are using the code/model/data provided here in a publication, please cons
 
     @article{liu2019richer,
       title={Richer Convolutional Features for Edge Detection},
-      author={Yun Liu and Ming-Ming Cheng and Xiaowei Hu and Jia-Wang Bian and Le Zhang and Xiang Bai and Jinhui Tang},
+      author={Liu, Yun and Cheng, Ming-Ming and Hu, Xiaowei and Bian, Jia-Wang and Zhang, Le and Bai, Xiang and Tang, Jinhui},
       journal={IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)},
       volume={41},
       number={8},
