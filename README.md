@@ -8,20 +8,23 @@ In this paper, we propose an accurate edge detector using richer convolutional f
 
 If you are using the code/model/data provided here in a publication, please consider citing our paper:
 
+    @article{liu2019richer,
+      title={Richer Convolutional Features for Edge Detection},
+      author={Yun Liu and Ming-Ming Cheng and Xiaowei Hu and Jia-Wang Bian and Le Zhang and Xiang Bai and Jinhui Tang},
+      journal={IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)},
+      volume={41},
+      number={8},
+      pages={1939--1946},
+      year={2019},
+      publisher={IEEE}
+    }
+
     @inproceedings{liu2017richer,
       title={Richer Convolutional Features for Edge Detection},
       author={Liu, Yun and Cheng, Ming-Ming and Hu, Xiaowei and Wang, Kai and Bai, Xiang},
       booktitle={IEEE conference on computer vision and pattern recognition (CVPR)},
       pages={3000--3009},
       year={2017}
-    }
-
-    @article{liu2019richer,
-      title={Richer Convolutional Features for Edge Detection},
-      author={Yun Liu and Ming-Ming Cheng and Xiaowei Hu and Jia-Wang Bian and Le Zhang and Xiang Bai and Jinhui Tang},
-      journal={IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)},
-      year={2019},
-      publisher={IEEE}
     }
 
 ### PyTorch version of RCF
