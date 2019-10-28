@@ -70,7 +70,7 @@ Note: Before evaluating the predicted edges, you should do the standard non-maxi
 
 1. Download the datasets you need.
 
-2. Download the pretrained vgg16 model from [here](http://mftp.mmcheng.net/liuyun/rcf/model/5stage-vgg.caffemodel).
+2. Download the pretrained vgg16 model [here](http://mftp.mmcheng.net/liuyun/rcf/model/5stage-vgg.caffemodel).
 
 3. Start training process by running following commands:
 
