@@ -36,7 +36,7 @@ Evaluation results for BSDS500 and NYUD datasets are available [here](http://mft
 
 **We have released the code and data for plotting the edge PR curves of many existing edge detectors [here](https://github.com/yun-liu/plot-edge-pr-curves).**
 
-The precomputed edge maps for BSDS500 dataset is available [here](https://drive.google.com/drive/folders/1jFRGTY9QtSYcM3fC6U86KWO1OmeSZCgZ?usp=sharing).
+The precomputed edge maps for BSDS500 dataset are available [here](https://drive.google.com/drive/folders/1jFRGTY9QtSYcM3fC6U86KWO1OmeSZCgZ?usp=sharing).
 
 ### Pretrained models
 
