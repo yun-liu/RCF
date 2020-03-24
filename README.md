@@ -11,7 +11,7 @@ If you are using the code/model/data provided here in a publication, please cons
     @article{liu2019richer,
       title={Richer Convolutional Features for Edge Detection},
       author={Liu, Yun and Cheng, Ming-Ming and Hu, Xiaowei and Bian, Jia-Wang and Zhang, Le and Bai, Xiang and Tang, Jinhui},
-      journal={IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)},
+      journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
       volume={41},
       number={8},
       pages={1939--1946},
