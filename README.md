@@ -19,14 +19,6 @@ If you are using the code/model/data provided here in a publication, please cons
       publisher={IEEE}
     }
 
-    @inproceedings{liu2017richer,
-      title={Richer Convolutional Features for Edge Detection},
-      author={Liu, Yun and Cheng, Ming-Ming and Hu, Xiaowei and Wang, Kai and Bai, Xiang},
-      booktitle={IEEE conference on computer vision and pattern recognition (CVPR)},
-      pages={3000--3009},
-      year={2017}
-    }
-
 ### PyTorch version of RCF
 For the pytorch implementation of RCF, please refer to this [github repository](https://github.com/meteorshowers/RCF-pytorch). Thanks for Yuanyi's contribution!
 
