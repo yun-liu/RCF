@@ -20,13 +20,14 @@ If you are using the code/model/data provided here in a publication, please cons
     }
 
 ### PyTorch version of RCF
+
 For the pytorch implementation of RCF, please refer to this [github repository](https://github.com/meteorshowers/RCF-pytorch). Thanks for Yuanyi's contribution!
 
 ### Evaluation results
 
 Evaluation results for BSDS500 and NYUD datasets are available [here](http://mftp.mmcheng.net/liuyun/rcf/eval.tar).
 
-**We have released the code and data for plotting the edge PR curves of many existing edge detectors [here](https://github.com/yun-liu/plot-edge-pr-curves).**
+![#f03c15](https://placehold.it/15/f03c15/000000?text=+) **We have released the code and data for plotting the edge PR curves of many existing edge detectors [here](https://github.com/yun-liu/plot-edge-pr-curves).**
 
 ### Precomputed results
 
