@@ -44,7 +44,7 @@ RCF model for NYUD dataset is available here ([Depth](http://mftp.mmcheng.net/li
 ### Testing RCF
 
 1. Clone the RCF repository
-    ```Shell
+    ```
     git clone https://github.com/yun-liu/rcf.git
     ```
 
@@ -52,7 +52,7 @@ RCF model for NYUD dataset is available here ([Depth](http://mftp.mmcheng.net/li
 
 3. Download the datasets you need as below, and extract these datasets to `$ROOT_DIR/data/` folder.
 
-    ```bash
+    ```
     wget http://mftp.mmcheng.net/liuyun/rcf/data/bsds_pascal_train_pair.lst
     wget http://mftp.mmcheng.net/liuyun/rcf/data/HED-BSDS.tar.gz
     wget http://mftp.mmcheng.net/liuyun/rcf/data/PASCAL.tar.gz
@@ -73,7 +73,7 @@ Note: Before evaluating the predicted edges, you should do the standard non-maxi
 
 3. Start training process by running following commands:
 
-    ```Shell
+    ```
     cd $ROOT_DIR/examples/rcf/
     ./train.sh
     ```
