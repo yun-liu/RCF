@@ -6,7 +6,7 @@ In this paper, we propose an accurate edge detector using richer convolutional f
 
 ### Citations
 
-If you are using the code/model/data provided here in a publication, please consider citing our paper:
+If you are using the code/model/data provided here in a publication, please consider citing:
 
     @article{liu2019richer,
       title={Richer Convolutional Features for Edge Detection},
