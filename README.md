@@ -1,5 +1,7 @@
 ## [Richer Convolutional Features for Edge Detection](http://mmcheng.net/rcfedge/)
 
+### We have released the code and data for plotting the edge PR curves of many existing edge detectors [here](https://github.com/yun-liu/plot-edge-pr-curves).
+
 ### Introduction
 
 In this paper, we propose an accurate edge detector using richer convolutional features (RCF). Since objects in natural images possess various scales and aspect ratios, learning the rich hierarchical representations is very critical for edge detection. CNNs have been proved to be effective for this task. In addition, the convolutional features in CNNs gradually become coarser with the increase of the receptive fields. According to these observations, we attempt to adopt richer convolutional features in such a challenging vision task. The proposed network fully exploits multiscale and multilevel information of objects to perform the image-to-image prediction by combining all the meaningful convolutional features in a holistic manner. Using VGG16 network, we achieve state-of-the-art performance on several available datasets. When evaluating on the well-known BSDS500 benchmark, we achieve ODS F-measure of 0.811 while retaining a fast speed (8 FPS). Besides, our fast version of RCF achieves ODS F-measure of 0.806 with 30 FPS.
@@ -26,8 +28,6 @@ For the pytorch implementation of RCF, please refer to this [github repository](
 ### Evaluation results
 
 Evaluation results for BSDS500 and NYUD datasets are available [here](http://mftp.mmcheng.net/liuyun/rcf/eval.tar).
-
-![#f03c15](https://placehold.it/15/f03c15/000000?text=+) **We have released the code and data for plotting the edge PR curves of many existing edge detectors [here](https://github.com/yun-liu/plot-edge-pr-curves).**
 
 ### Precomputed results
 
