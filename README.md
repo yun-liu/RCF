@@ -23,7 +23,7 @@ If you are using the code/model/data provided here in a publication, please cons
 
 ### PyTorch version of RCF
 
-For the pytorch implementation of RCF, please refer to this [github repository](https://github.com/meteorshowers/RCF-pytorch). Thanks for Yuanyi's contribution!
+For the PyTorch implementation of RCF, please refer to this [github repository](https://github.com/balajiselvaraj1601/RCF_Pytorch_Updated). Thanks for the Balaji's contribution! According to the issue #134, this PyTorch implementation can reproduce the accuracy of the Caffe version.
 
 ### Evaluation results
 
