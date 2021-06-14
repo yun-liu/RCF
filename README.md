@@ -23,7 +23,7 @@ If you are using the code/model/data provided here in a publication, please cons
 
 ### PyTorch version of RCF
 
-For the PyTorch implementation of RCF, please refer to this github repository: [balajiselvaraj1601/RCF_Pytorch_Updated](https://github.com/balajiselvaraj1601/RCF_Pytorch_Updated). Thanks for the Balaji's contribution! According to the [issue #134](https://github.com/yun-liu/RCF/issues/134), this PyTorch implementation can reproduce the accuracy of the Caffe version.
+For the PyTorch implementation of RCF, please refer to this repository: [balajiselvaraj1601/RCF_Pytorch_Updated](https://github.com/balajiselvaraj1601/RCF_Pytorch_Updated). Thanks for Balaji's contribution! According to the [issue #134](https://github.com/yun-liu/RCF/issues/134), this PyTorch implementation can reproduce the accuracy of the Caffe version.
 
 ### Evaluation results
 
