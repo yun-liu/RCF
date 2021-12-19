@@ -23,11 +23,11 @@ If you are using the code/model/data provided here in a publication, please cons
 
 ### PyTorch version of RCF
 
-For the PyTorch implementation of RCF, please refer to this repository: [balajiselvaraj1601/RCF_Pytorch_Updated](https://github.com/balajiselvaraj1601/RCF_Pytorch_Updated). Thanks for Balaji's contribution! According to the [issue #134](https://github.com/yun-liu/RCF/issues/134), this PyTorch implementation can reproduce the accuracy of the Caffe version.
+For the PyTorch implementation of RCF, please refer to this repository: [yun-liu/RCF-PyTorch](https://github.com/yun-liu/RCF-PyTorch) (a clean version of [balajiselvaraj1601/RCF_Pytorch_Updated](https://github.com/balajiselvaraj1601/RCF_Pytorch_Updated)). Thanks for Balaji's contribution! According to the [issue #134](https://github.com/yun-liu/RCF/issues/134), this PyTorch implementation can reproduce the accuracy of the Caffe version.
 
 ### Evaluation results
 
-Evaluation results for BSDS500 and NYUD datasets are available [here](http://mftp.mmcheng.net/liuyun/rcf/eval.tar).
+Evaluation results on the BSDS500 and NYUD datasets are available [here](http://mftp.mmcheng.net/liuyun/rcf/eval.tar).
 
 ### Precomputed results
 
@@ -48,9 +48,9 @@ RCF model for NYUD dataset is available here ([Depth](http://mftp.mmcheng.net/li
     git clone https://github.com/yun-liu/rcf.git
     ```
 
-2. Download pretrained models, and put them into `$ROOT_DIR/examples/rcf/` folder.
+2. Download pretrained models, and put them into the `$ROOT_DIR/examples/rcf/` folder.
 
-3. Download the datasets you need as below, and extract these datasets to `$ROOT_DIR/data/` folder.
+3. Download the datasets you need as below, and extract these datasets to the `$ROOT_DIR/data/` folder.
 
     ```
     wget http://mftp.mmcheng.net/liuyun/rcf/data/bsds_pascal_train_pair.lst
@@ -61,9 +61,9 @@ RCF model for NYUD dataset is available here ([Depth](http://mftp.mmcheng.net/li
 
 4. Build Caffe.
 
-5. Go into the folder `$ROOT_DIR/examples/rcf/`. Then, you can run RCF-singlescale.ipynb to test single-scale RCF on BSDS500 dataset, or run RCF-multiscale.ipynb to test multiscale RCF on BSDS500 dataset, or run RCF-singlescale-NYUD.ipynb to test single-scale RCF on NYUD dataset.
+5. Go into the folder `$ROOT_DIR/examples/rcf/`. Then, you can run RCF-singlescale.ipynb to test single-scale RCF on the BSDS500 dataset, or run RCF-multiscale.ipynb to test multiscale RCF on the BSDS500 dataset, or run RCF-singlescale-NYUD.ipynb to test single-scale RCF on the NYUD dataset.
 
-Note: Before evaluating the predicted edges, you should do the standard non-maximum suppression (NMS) and edge thinning. We used Piotr's Structured Forest matlab toolbox available [here](https://github.com/pdollar/edges).
+Note: Before evaluating the predicted edges, you should do the standard non-maximum suppression (NMS) and edge thinning. We used the Piotr's Structured Forest matlab toolbox available [here](https://github.com/pdollar/edges).
 
 ### Training RCF
 
@@ -71,7 +71,7 @@ Note: Before evaluating the predicted edges, you should do the standard non-maxi
 
 2. Download the pretrained vgg16 model [here](http://mftp.mmcheng.net/liuyun/rcf/model/5stage-vgg.caffemodel).
 
-3. Start training process by running following commands:
+3. Start training process by running the following commands:
 
     ```
     cd $ROOT_DIR/examples/rcf/
