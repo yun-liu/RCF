@@ -1,6 +1,6 @@
 ## [Richer Convolutional Features for Edge Detection](http://mmcheng.net/rcfedge/)
 
-### We have released the code and data for plotting the edge PR curves of many existing edge detectors [here](https://github.com/yun-liu/plot-edge-pr-curves).
+We have released the code and data for plotting the edge PR curves of many existing edge detectors [here](https://github.com/yun-liu/plot-edge-pr-curves).
 
 ### Introduction
 
