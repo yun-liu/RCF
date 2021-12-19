@@ -93,7 +93,7 @@ This code is based on HED. Thanks to the contributors of HED.
     @inproceedings{xie2015holistically,
       title={Holistically-nested edge detection},
       author={Xie, Saining and Tu, Zhuowen},
-      booktitle={Proceedings of the IEEE International Conference on Computer Vision},
+      booktitle={IEEE International Conference on Computer Vision},
       pages={1395--1403},
       year={2015}
     }
