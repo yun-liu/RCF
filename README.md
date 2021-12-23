@@ -2,10 +2,6 @@
 
 We have released the code and data for plotting the edge PR curves of many existing edge detectors [here](https://github.com/yun-liu/plot-edge-pr-curves).
 
-### Introduction
-
-In this paper, we propose an accurate edge detector using richer convolutional features (RCF). Since objects in natural images possess various scales and aspect ratios, learning the rich hierarchical representations is very critical for edge detection. CNNs have been proved to be effective for this task. In addition, the convolutional features in CNNs gradually become coarser with the increase of the receptive fields. According to these observations, we attempt to adopt richer convolutional features in such a challenging vision task. The proposed network fully exploits multiscale and multilevel information of objects to perform the image-to-image prediction by combining all the meaningful convolutional features in a holistic manner. Using VGG16 network, we achieve state-of-the-art performance on several available datasets. When evaluating on the well-known BSDS500 benchmark, we achieve ODS F-measure of 0.811 while retaining a fast speed (8 FPS). Besides, our fast version of RCF achieves ODS F-measure of 0.806 with 30 FPS.
-
 ### Citations
 
 If you are using the code/model/data provided here in a publication, please consider citing:
@@ -24,6 +20,10 @@ If you are using the code/model/data provided here in a publication, please cons
 ### PyTorch version of RCF
 
 For the PyTorch implementation of RCF, please refer to this repository: [yun-liu/RCF-PyTorch](https://github.com/yun-liu/RCF-PyTorch) (a clean version of [balajiselvaraj1601/RCF_Pytorch_Updated](https://github.com/balajiselvaraj1601/RCF_Pytorch_Updated)). Thanks for Balaji's contribution! This PyTorch implementation can reproduce the accuracy of the Caffe version.
+
+### Jittor version of RCF
+
+For the Jittor implementation of RCF, please refer to this repository: [yun-liu/RCF-Jittor](https://github.com/yun-liu/RCF-Jittor).
 
 ### Evaluation results
 
@@ -86,14 +86,6 @@ The code for the ResNet version of RCF has been released. The pretrained ImageNe
 
 The "AutoCrop" layer in RCF can caculate the crop offset automatically, and the recent version of Caffe doesn't support this. In fact, we can calculate the crop offset by ourselves, so we can replace the "AutoCrop" layer with the standard Crop layer in Caffe by setting the offsets to 1, 2, 4, and 0 for conv2, conv3, conv4, and conv5, respectively. More details can be found under the [issue #24](https://github.com/yun-liu/rcf/issues/24).
 
-### Acknowledgment
+### Acknowledgments
 
-This code is based on HED. Thanks to the contributors of HED.
-
-    @inproceedings{xie2015holistically,
-      title={Holistically-nested edge detection},
-      author={Xie, Saining and Tu, Zhuowen},
-      booktitle={IEEE International Conference on Computer Vision},
-      pages={1395--1403},
-      year={2015}
-    }
+This code is based on HED ([s9xie/hed](https://github.com/s9xie/hed)). Thanks to the contributors of HED.
