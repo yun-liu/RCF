@@ -17,6 +17,16 @@ If you are using the code/model/data provided here in a publication, please cons
       publisher={IEEE}
     }
 
+    @article{liu2022semantic,
+      title={Semantic edge detection with diverse deep supervision},
+      author={Liu, Yun and Cheng, Ming-Ming and Fan, Deng-Ping and Zhang, Le and Bian, JiaWang and Tao, Dacheng},
+      journal={International Journal of Computer Vision},
+      volume={130},
+      pages={179--198},
+      year={2022},
+      publisher={Springer}
+    }
+
 ### PyTorch version of RCF
 
 For the PyTorch implementation of RCF, please refer to this repository: [yun-liu/RCF-PyTorch](https://github.com/yun-liu/RCF-PyTorch) (a clean version of [balajiselvaraj1601/RCF_Pytorch_Updated](https://github.com/balajiselvaraj1601/RCF_Pytorch_Updated)). Thanks for Balaji's contribution! This PyTorch implementation can reproduce the accuracy of the Caffe version.
